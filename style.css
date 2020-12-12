@@ -1,0 +1,57 @@
+.toolbar {
+	border-color: black;
+	margin-top: 10%;
+	border-top-width: 5px;
+	
+}
+#username {
+	font-family: 'Roboto' , sans-serif;
+}
+#view {
+	border-width: 1px;
+	color:  black;
+	border-radius: 5px;
+	height: 25px;
+	width: 100px;
+}
+.upper {
+	text-align: right;
+}
+.users {
+	margin-left: 25%;
+}
+.meet info {
+	border-width: thin;
+}
+#tool {
+	border-radius: 10px;
+	border-color: black;
+	width: 50px;
+	height: 55px;
+}
+#leave {
+	background-color: red;
+	color: white;
+	border-radius: 10px;
+	border-width: 0px;
+	height: 30px;
+	margin-left: 42%;
+	width: 75px;
+	font-size: 15px;
+}
+//webcam stream
+#container {
+	margin: 0px;
+	width: 500px;
+	height: 10%;
+	border: 10px;
+	border-color: black;
+	padding: 5px;
+	border-width: 2px;
+	
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #fff;
+}

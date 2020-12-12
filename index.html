@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Meeting In Progress &middot; ShiveshMeet Web Meeting</title>
+				<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://shiveshmeet.github.io/assests/shiveshmeetlogo.png">
+</head>
+
+<body>
+				<script src="https://kit.fontawesome.com/13b485848c.js"></script>
+	<script src="main.js"></script>
+	<div class="upper">
+		<span class="meet info">
+		<img onclick="meetinfo()" src="https://www.freelogodesign.org/file/app/client/thumb/9d7beadb-ce8d-47e6-8c4e-2eaf1ee60fc3_200x200.png?1607678801946" height="25px;" width="25px;" title="Meeting Information">
+		</span>
+		<input list="Pin" name="browser" id="browser">
+  <datalist id="Pin">
+    <option value="xyz">
+    <option value="z123">
+    <option value="abc">
+    <option value="Shivesh Pai" id="usernamedrp">
+  </datalist>
+		<select id="view"><optgroup>
+		<option title="Tile View">Tile View</option>
+		<option title="Speaker View">Speaker View</option>
+		</optgroup>
+		</select>
+		<button onclick="rename()" style="height:20px;width: 75px;height: 25px; border-width: 1px;border-color: black; background-color: white;">Rename</button>
+		<button onclick="fullscreen()" id="fscreen" style="height:20px;width: 125px;height: 25px; border-width: 1px;border-color: black; background-color: white;">Fullscreen
+		</button>
+	</div>
+	<section class="main">
+		<span class=main>
+			<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video><br>
+				<label id="username">Shivesh Pai</label>
+			</div>
+		</span>
+	</section>
+	<div class="toolbar">
+		<span title="Audio" class="mic" style="background-color: white" onclick="audio()" id="tool"><img src="https://shiveshmeet.github.io/assests/microphone-slash-solid.svg" height="30px;" width="60px;" id="mic"></span><span class="video" onclick="video()" title="Video" id="tool"><img src="https://shiveshmeet.github.io/assests/video-slash-solid.svg" height="30px" width="60px;" id="video"></span>
+		<span class="users" id="tool" style="background-color: white" onclick="user()" title="Show Participants">
+		<img height="30px;" width="60px;" src="https://shiveshmeet.github.io/assests/users-solid.svg">
+		</span>
+			<span class="chat" id="tool" title="Chat" style="background-color: white" onclick="chat()"><img height="30px;" width="60px;" aria-label="Share Screen" src="https://shiveshmeet.github.io/assests/comment-alt-solid.svg"></span>
+			<span class="screenshare" id="tool" style="background-color: white" onclick="screenshare()" width="60px;" title="Share Your Screen"><img height="35px;" width="40px;" src="https://www.freelogodesign.org/file/app/client/thumb/4f91a98b-159b-4202-9022-391f01b6d3b8_200x200.png?1607681557297" id="screenshare">
+		</span>
+		<button title="Leave Meeting" id="leave" onclick="leave()">Leave</button>
+	</div>
+</body>
+</html>

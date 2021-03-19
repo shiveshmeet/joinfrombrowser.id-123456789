@@ -49,6 +49,7 @@ function screenshare() {
 	} else {
 		document.getElementById("screenshare").src = "https://www.freelogodesign.org/file/app/client/thumb/ec8523f5-f256-4bcb-b21f-594388c798a0_200x200.png?1607682658201";
 		videoElement.requestPictureInPicture();
+		window.open("screenshare.html" , "_blank")
 	}
 }
 function fullscreen() {
@@ -57,4 +58,13 @@ if (document.getElementById("fscreen").innerHTML == "Fullscreen") {
 } else {
 	document.getElementById("fscreen").innerHTML = "Fullscreen";
 }
+}
+function shiveshcode() {
+  window.open("https://0fvihxxcyeszhg3yy2pcaa-on.drv.tw/ScienceMan/" , "_blank" , 100 ,200)
+}
+function html() {
+  window.open("https://0fvihxxcyeszhg3yy2pcaa-on.drv.tw/ScienceMan/htmleditor.html" , "_blank" , 100 ,200)
+}
+function sharecode() {
+  window.prompt("URL:" , "https://projects.shiveshuno.com/code/1234567.shiveshcode" , "Submit")
 }

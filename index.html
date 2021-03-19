@@ -3,7 +3,7 @@
 <head>
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Meeting In Progress &middot; ShiveshMeet Web Meeting</title>
+				<title>ScienceMan Meeting &middot; ShiveshMeet Web Meeting</title>
 				<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="icon" href="https://shiveshmeet.github.io/assests/shiveshmeetlogo.png">
@@ -13,79 +13,24 @@
 				<script src="https://kit.fontawesome.com/13b485848c.js"></script>
 	<script src="main.js"></script>
 	<div class="upper">
-		<script>
-			function rename() {
-	var personprompt = prompt("Please Enter A New Screen Name:");
-  if (personprompt != null) {
-	  var uname = personprompt ;
-    document.getElementById("username").innerHTML =  uname;
-	  document.getElementById("usernamedrp").value = uname;
-  }
-}
-function audio() {
-	if (document.getElementById("mic").src == "https://shiveshmeet.github.io/assests/microphone-slash-solid.svg") {
-	document.getElementById("mic").src = "https://shiveshmeet.github.io/assests/microphone-solid.svg"; 
-} else {
-	document.getElementById("mic").src = "https://shiveshmeet.github.io/assests/microphone-slash-solid.svg";
-};
-}
-function video() {
-	if (document.getElementById("video").src == "https://shiveshmeet.github.io/assests/video-solid.svg") {
-	document.getElementById("video").src = "https://shiveshmeet.github.io/assests/video-slash-solid.svg";
-		
-} else {
-	document.getElementById("video").src = "https://shiveshmeet.github.io/assests/video-solid.svg";
-	var video = document.querySelector("#videoElement");
-
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
-}
-}
-function leave() {
-	window.confirm("Are You Sure To Leave This Meeting?")
-}
-function chat() {
-	var chatopen = document.getElementById("chat").style.display;
-	if (chatopen == "none") {
-		chatopen = "block";
-	} else {
-		chatopen = "none";
-	}
-}
-function screenshare() {
-	if (document.getElementById("screenshare").src == "https://www.freelogodesign.org/file/app/client/thumb/ec8523f5-f256-4bcb-b21f-594388c798a0_200x200.png?1607682658201"){
-		document.getElementById("screenshare").src = "https://www.freelogodesign.org/file/app/client/thumb/4f91a98b-159b-4202-9022-391f01b6d3b8_200x200.png?1607681557297";
-	} else {
-		document.getElementById("screenshare").src = "https://www.freelogodesign.org/file/app/client/thumb/ec8523f5-f256-4bcb-b21f-594388c798a0_200x200.png?1607682658201";
-		videoElement.requestPictureInPicture();
-	}
-}
-function fullscreen() {
-if (document.getElementById("fscreen").innerHTML == "Fullscreen") {
-	document.getElementById("fscreen").innerHTML = "Exit Full Screen";
-} else {
-	document.getElementById("fscreen").innerHTML = "Fullscreen";
-}
-}
-		</script>
-		<span class="meet info">
-		<img onclick="meetinfo()" src="https://www.freelogodesign.org/file/app/client/thumb/9d7beadb-ce8d-47e6-8c4e-2eaf1ee60fc3_200x200.png?1607678801946" height="25px;" width="25px;" title="Meeting Information">
-		</span>
-		<input list="Pin" name="browser" id="browser">
+    <button onclick="sharecode()" style="height:20px;width: 200px;height: 25px; border-width: 1px;border-color: black; background-color: white;">Share ShiveshCode File</button>
+    <button onclick="html()" style="height:20px;width: 100px;height: 25px; border-width: 1px;border-color: black; background-color: white;">HTML editor</button>
+    <button onclick="shiveshcode()" style="height:20px;width: 150px;height: 25px; border-width: 1px;border-color: black; background-color: white;">Open ShiveshCode</button>
+	<input list="Pin" name="browser" id="browser">
   <datalist id="Pin">
-    <option value="xyz">
-    <option value="z123">
-    <option value="abc">
-    <option value="Shivesh Pai" id="usernamedrp">
+    <option value="Shardul Shinde">
+    <option value="Swaroop Kadam">
+    <option value="Vihan Thate">
+    <option value="Saanvi Shah">
+    <option value="Dhyeya Vasava">
+    <option value="Yug Sodha">
+    <option value="Vihan Thate">
+    <option value="Spruha Vaidya">
+    <option value="Devaditya Gupta">
+    <option value="Punya Saxena">
+    <option value="You" id="usernamedrp">
   </datalist>
-		<select id="view"><optgroup>
+		<select id="view"><optgroup label="">
 		<option title="Tile View">Tile View</option>
 		<option title="Speaker View">Speaker View</option>
 		</optgroup>
@@ -100,7 +45,7 @@ if (document.getElementById("fscreen").innerHTML == "Fullscreen") {
 	<video autoplay="true" id="videoElement">
 	
 	</video><br>
-				<label id="username">Shivesh Pai</label>
+				<label onclick="rename()" id="username">Your Name</label>
 			</div>
 		</span>
 	</section>

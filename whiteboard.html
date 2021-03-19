@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="greatlearning.png">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body class="body_backgorund">
+        <center>
+          <canvas id="myCanvas" width="800" height="500"></canvas>
+          <br>
+
+          <span>Color </span>
+          <input type="text" id="color">
+        </center>
+      </body>
+    </html>
+<script>var mouseEvent = "empty" ;
+var lastpx , lastpy ;
+canvas = document.getElementById("myCanvas");
+ctx = canvas.getContext("2d");
+color = "black" ;
+linewidth = 2;
+function clear() {
+  ctx.clearRect(0 ,0 , canvas.width , canvas.height);
+}
+canvas.addEventListener("mousedown" , mymousedown);
+function mymousedown(e) {
+  color = document.getElementById("color").value ;
+  mouseEvent = "mouseDown" ; 
+}
+canvas.addEventListener("mousemove" , mymousemove);
+function mymousemove(e) {
+  currentpx = e.clientX - canvas.offsetLeft;
+  currentpy = e.clientY - canvas.offsetTop;
+  if(mouseEvent == "mouseDown" ) {
+    ctx.beginPath() ;
+    ctx.strokeStyle = color ;
+    ctx.lineWidth = linewidth ;
+    ctx.moveTo(lastpx , lastpy);
+    ctx.lineTo(currentpx , currentpy) ;
+    ctx.stroke();
+  }
+  lastpx = currentpx ; 
+  lastpy = currentpy ;
+}
+canvas.addEventListener("mouseup" , mymouseup);
+function mymouseup(e) {
+  mouseEvent = "mouseUp" ; 
+}
+canvas.addEventListener("mouseleave" , mymouseleave);
+function mymouseleave(e) {
+  mouseEvent = "mouseLeave" ; 
+}</script>
+<style>
+h1
+{
+  color: red; 
+  font-size: 40px;
+}
+.body_backgorund {
+  background-image: url("bg1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#myCanvas{
+  border:0px solid black;
+  margin-left: 0px;
+  background-color: white;
+  cursor: crosshair;
+}
+</style>
